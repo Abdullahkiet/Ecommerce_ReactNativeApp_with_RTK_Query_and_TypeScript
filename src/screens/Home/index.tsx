@@ -49,8 +49,8 @@ const HomeScreen = () => {
   //render products
   const renderProducts = (item: ProductData) => {
     return (
-      <View style={{marginVertical: 15}}>
-        <View style={{flexDirection: 'row'}}>
+      <View style={styles.productContainer}>
+        <View style={styles.flexRow}>
           <Image source={{uri: item.img}} style={styles.itemImage} />
           <View>
             <Text>{item.name}</Text>
@@ -78,7 +78,7 @@ const HomeScreen = () => {
   };
 
   return (
-    <View style={{flex: 1, alignItems: 'center'}}>
+    <View style={styles.container}>
       <Text>Abdullah E-Commerce Store</Text>
       <FlatList data={products} renderItem={({item}) => renderProducts(item)} />
       <TouchableOpacity

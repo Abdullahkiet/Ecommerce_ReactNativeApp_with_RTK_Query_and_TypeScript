@@ -27,6 +27,12 @@ const styles = StyleSheet.create({
   addToCartButton: {
     color: 'green',
   },
+  productContainer: {
+    marginVertical: 15,
+  },
+  flexRow: {
+    flexDirection: 'row',
+  },
 });
 
 export default styles;

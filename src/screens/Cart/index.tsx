@@ -32,7 +32,7 @@ const Cart = () => {
     const itemQuantity = itemQuantities[index] || 1;
 
     return (
-      <View style={{flexDirection: 'row'}}>
+      <View style={styles.flexRow}>
         <TouchableOpacity
           onPress={() => {
             const newQuantity = itemQuantity > 1 ? itemQuantity - 1 : 1;
@@ -67,8 +67,8 @@ const Cart = () => {
 
   const renderProducts = (item: ProductData) => {
     return (
-      <View style={{marginVertical: 15}}>
-        <View style={{flexDirection: 'row'}}>
+      <View style={styles.productContainer}>
+        <View style={styles.flexRow}>
           <Image source={{uri: item.img}} style={styles.itemImage} />
           <View>
             <Text>{item.name}</Text>
